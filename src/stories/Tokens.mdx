@@ -1,0 +1,67 @@
+{/* Значень тут немає: усе береться зі змінних @theme у src/app/globals.css */}
+import { Meta, ColorPalette, ColorItem, Typeset } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Tokens" />
+
+# Токени
+
+Усі значення живуть у блоці `@theme` файлу `globals.css`. Ця сторінка читає їх зі змінних, тому показує те, що є на сайті.
+
+## Кольори
+
+<ColorPalette>
+  <ColorItem title="canvas (фон)" colors={["var(--color-canvas)"]} />
+  <ColorItem title="surface (картки, поля)" colors={["var(--color-surface)"]} />
+  <ColorItem title="line (лінії, рамки карток)" colors={["var(--color-line)"]} />
+  <ColorItem title="primary (імʼя, заголовки)" colors={["var(--color-primary)"]} />
+  <ColorItem title="accent (заливки й лінії)" colors={["var(--color-accent)"]} />
+  <ColorItem title="ink (текст)" colors={["var(--color-ink)"]} />
+  <ColorItem title="ink-muted (приглушений текст)" colors={["var(--color-ink-muted)"]} />
+  <ColorItem title="danger (помилка)" colors={["var(--color-danger)"]} />
+</ColorPalette>
+
+## Шрифти й розміри тексту
+
+<Typeset
+  fontFamily="var(--font-sans)"
+  fontSizes={[
+    "var(--text-caption)",
+    "var(--text-body)",
+    "var(--text-lead)",
+    "var(--text-heading)",
+    "var(--text-display)",
+  ]}
+  sampleText="Привіт, я Ольга. Дизайн і розробка"
+/>
+
+Імʼя: шрифт `font-display`.
+
+<div className="sb-unstyled font-display text-display text-primary">Olha Zorina</div>
+
+Розміри за назвами: `text-caption`, `text-body`, `text-lead`, `text-heading`, `text-display`.
+
+<div className="sb-unstyled font-sans flex flex-col gap-4">
+  <div className="text-caption">text-caption: Привіт, я Ольга</div>
+  <div className="text-body">text-body: Привіт, я Ольга</div>
+  <div className="text-lead">text-lead: Привіт, я Ольга</div>
+  <div className="text-heading">text-heading: Привіт, я Ольга</div>
+  <div className="text-display">text-display: Привіт</div>
+</div>
+
+## Радіуси
+
+<div className="sb-unstyled font-sans flex gap-6">
+  <div className="bg-accent text-ink text-caption rounded-control p-4">rounded-control</div>
+  <div className="bg-accent text-ink text-caption rounded-card p-4">rounded-card</div>
+</div>
+
+## Пропорції
+
+<div className="sb-unstyled font-sans flex flex-col gap-6">
+  <div className="bg-line text-ink text-caption p-2 w-full aspect-hero">aspect-hero</div>
+  <div className="grid grid-cols-3 gap-6">
+    <div className="bg-line text-ink text-caption p-2 w-full aspect-logo">aspect-logo</div>
+    <div className="bg-line text-ink text-caption p-2 w-full aspect-cover">aspect-cover</div>
+    <div className="bg-line text-ink text-caption p-2 w-full aspect-portrait">aspect-portrait</div>
+  </div>
+</div>

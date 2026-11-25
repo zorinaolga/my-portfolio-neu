@@ -25,7 +25,7 @@
 - **Радіуси:** `rounded-control`, `rounded-card` (зараз обидва 0: кути прямі).
 - **Пропорції:** `aspect-hero`, `aspect-logo`, `aspect-cover`, `aspect-portrait`.
 - **Відступи:** тільки 8, 12, 16, 24, 32 px (числа 2, 3, 4, 6, 8: `p-2`, `gap-4`).
-- **Розкладка:** `max-w-content` (1240), `px-page` (100), `py-section` / `gap-section` (40), `h-header` (60).
+- **Розкладка (лише для сторінок, не для компонентів):** `max-w-page` (1240), `px-page` (100), `py-section` / `gap-section` (40).
 - **Запропоновано, не з макета:** `surface`, `ink-muted`, `danger`, радіуси, `aspect-cover`, `aspect-portrait`, `py-section` для інших секцій. Темної теми в токенах поки немає.
 
 ## Компоненти

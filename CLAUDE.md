@@ -30,7 +30,7 @@
 
 ## Компоненти
 
-Заповнимо далі.
+- **Button** (`src/components/Button/Button.tsx`): варіанти `primary`, `secondary`, `text`; розміри `md`, `lg`; `disabled` через `aria-disabled` + `disabledReason` (`aria-describedby`). Докладно: Storybook → Components/Button → Docs.
 
 ## Правила
 

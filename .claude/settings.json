@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(vercel --prod *)",
+      "Bash(vercel deploy --prod *)",
+      "Bash(vercel deploy --target=production *)",
+      "Bash(vercel deploy --target production *)",
+      "Bash(vercel promote *)",
+      "Bash(vercel rollback *)",
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Read(./.env*)",
+      "Read(**/.env*)",
+      "PowerShell(*.env*)"
+    ]
+  }
+}

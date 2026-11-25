@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Токени дизайн-системи. Єдине джерело значень.
+  Стандартні палітра, розміри тексту й радіуси Tailwind скинуто:
+  працюють лише класи, названі нижче.
+*/
+@theme {
+  /* Кольори */
+  --color-*: initial;
+  --color-canvas: #fffaf5; /* фон сторінки */
+  --color-surface: #ffffff; /* картки й поля (запропоновано) */
+  --color-line: #fbd6ce; /* декоративні лінії й рамки карток */
+  --color-primary: #173f36; /* основний: імʼя, ключові заголовки */
+  --color-accent: #ed685a; /* акцент: лише заливки й лінії, не текст */
+  --color-ink: #222222; /* текст */
+  --color-ink-muted: #5f5f5f; /* приглушений текст і межі полів (запропоновано) */
+  --color-danger: #a8124a; /* помилка (запропоновано) */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Шрифти */
+  --font-*: initial;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-aboreto), ui-serif, serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Розміри тексту: розмір, висота рядка, трекінг, жирність */
+  --text-*: initial;
+  --text-caption: 1rem;
+  --text-caption--line-height: 1.3;
+  --text-caption--letter-spacing: 0em;
+  --text-caption--font-weight: 500;
+  --text-body: 1.25rem;
+  --text-body--line-height: 1.3;
+  --text-body--letter-spacing: 0em;
+  --text-body--font-weight: 500;
+  --text-lead: 1.5rem;
+  --text-lead--line-height: 1.3;
+  --text-lead--letter-spacing: 0.03em;
+  --text-lead--font-weight: 600;
+  --text-heading: 2rem;
+  --text-heading--line-height: 1.3;
+  --text-heading--letter-spacing: 0.03em;
+  --text-heading--font-weight: 600;
+  --text-display: 4rem;
+  --text-display--line-height: 1.2;
+  --text-display--letter-spacing: 0em;
+  --text-display--font-weight: 400;
+
+  /* Трекінг для окремих випадків: tracking-label, tracking-caps */
+  --tracking-*: initial;
+  --tracking-label: 0.03em; /* напівжирні підписи, наприклад «Роблю» */
+  --tracking-caps: 0.04em; /* великі літери, наприклад рухомий рядок */
+
+  /* Радіуси: кути в макеті прямі */
+  --radius-*: initial;
+  --radius-control: 0px; /* кнопки, поля (запропоновано) */
+  --radius-card: 0px; /* картки (запропоновано) */
+
+  /* Пропорції картинок */
+  --aspect-hero: 27 / 11; /* з макета */
+  --aspect-logo: 52 / 66; /* з макета */
+  --aspect-cover: 4 / 3; /* обкладинка роботи (запропоновано) */
+  --aspect-portrait: 4 / 5; /* портрет (запропоновано) */
+
+  /* Розкладка сторінки (окремо від відступів 8, 12, 16, 24, 32) */
+  --container-content: 1240px; /* max-w-content: ширина контенту */
+  --spacing-page: 100px; /* px-page: бічні поля на десктопі */
+  --spacing-section: 40px; /* py-section, gap-section: між великими секціями (за одним прикладом з макета) */
+  --spacing-header: 60px; /* h-header: висота шапки */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }

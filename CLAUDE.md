@@ -17,7 +17,16 @@
 
 ## Токени
 
-Заповнимо далі.
+Єдине джерело значень — блок `@theme` у `src/app/globals.css`. Стандартні палітра, розміри тексту й радіуси Tailwind скинуто: класи на кшталт `bg-blue-600`, `text-sm`, `text-white` не працюють і не повідомляють про помилку. Hex, rgb і значення в квадратних дужках (`p-[13px]`) у компонентах заборонені.
+
+- **Кольори:** `canvas` (фон), `surface` (картки, поля), `line` (лінії й рамки карток), `primary` (імʼя, ключові заголовки), `accent` (лише заливки й лінії, не текст: контраст 3,01), `ink` (текст), `ink-muted` (приглушений текст, межі полів), `danger` (помилка). Класи: `bg-canvas`, `text-ink`, `border-line` тощо. На акцентній заливці текст `ink`, не `canvas`.
+- **Шрифти:** `font-sans` (Manrope, весь текст) і `font-display` (Aboreto, лише імʼя). Підключені в `src/app/fonts.ts`.
+- **Текст:** `text-caption` (16), `text-body` (20), `text-lead` (24), `text-heading` (32), `text-display` (64). Висота рядка, трекінг і жирність задані парами в `@theme`. Додатково: `tracking-label` (напівжирні підписи), `tracking-caps` (великі літери).
+- **Радіуси:** `rounded-control`, `rounded-card` (зараз обидва 0: кути прямі).
+- **Пропорції:** `aspect-hero`, `aspect-logo`, `aspect-cover`, `aspect-portrait`.
+- **Відступи:** тільки 8, 12, 16, 24, 32 px (числа 2, 3, 4, 6, 8: `p-2`, `gap-4`).
+- **Розкладка:** `max-w-content` (1240), `px-page` (100), `py-section` / `gap-section` (40), `h-header` (60).
+- **Запропоновано, не з макета:** `surface`, `ink-muted`, `danger`, радіуси, `aspect-cover`, `aspect-portrait`, `py-section` для інших секцій. Темної теми в токенах поки немає.
 
 ## Компоненти
 

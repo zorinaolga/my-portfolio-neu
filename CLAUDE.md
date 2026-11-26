@@ -32,6 +32,7 @@
 
 - **Button** (`src/components/Button/Button.tsx`): варіанти `primary`, `secondary`, `text`; розміри `md`, `lg`; `disabled` через `aria-disabled` + `disabledReason` (`aria-describedby`). Докладно: Storybook → Components/Button → Docs.
 - **FormField** (`src/components/FormField/FormField.tsx`): поле форми запиту; варіанти `name`, `email`, `interest` (список), `project` (до 1000 символів), `company` (до 250); `error` + `errorText` лише в `name`, `email`, `interest`; `disabled`. Докладно: Storybook → Components/FormField → Docs.
+- **WorkCard** (`src/components/WorkCard/WorkCard.tsx`): картка роботи: `cover` (імпорт з `src/assets`), `title`, `description`, `href`; уся картка є посиланням, стани default, hover, focus. Докладно: Storybook → Components/WorkCard → Docs.
 
 ## Правила
 

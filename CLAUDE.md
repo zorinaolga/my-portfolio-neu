@@ -31,6 +31,7 @@
 ## Компоненти
 
 - **Button** (`src/components/Button/Button.tsx`): варіанти `primary`, `secondary`, `text`; розміри `md`, `lg`; `disabled` через `aria-disabled` + `disabledReason` (`aria-describedby`). Докладно: Storybook → Components/Button → Docs.
+- **FormField** (`src/components/FormField/FormField.tsx`): поле форми запиту; варіанти `name`, `email`, `interest` (список), `project` (до 1000 символів), `company` (до 250); `error` + `errorText` лише в `name`, `email`, `interest`; `disabled`. Докладно: Storybook → Components/FormField → Docs.
 
 ## Правила
 
